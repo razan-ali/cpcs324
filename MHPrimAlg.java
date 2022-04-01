@@ -38,7 +38,7 @@ public class MHPrimAlg extends MSTAlgorithm {
     }
     /**
      * constructor 
-     * @param verticesNo 
+     * @param verticesNo of a graph input
      */
     public MHPrimAlg(int verticesNo){
         capacity =  verticesNo;//capacity of minHeap equal to the number of vertices in graph
@@ -54,7 +54,7 @@ public class MHPrimAlg extends MSTAlgorithm {
     
     /**
      * this method take the graph as its parameter to find MST of a graph
-     * @param graph 
+     * @param graph (directed/undirected)input of method 
      */    
     public void PrimMH(Graph graph){
         MSTResultList= new Edge[capacity];
@@ -93,13 +93,13 @@ public class MHPrimAlg extends MSTAlgorithm {
                 //only if edge destination is present in heap (doesnt visited yet)
                 if (!MSTResultList[edge.target.label].source.isVisited) {
                     int destination = edge.target.label;
-                    int newKey = edge.weight;
+                    int newWight = edge.weight;
                     //check if updated key < existing key, if yes, update if
-                    if (MSTResultList[destination].weight > newKey) {
-                        decreaseKey(newKey, destination);//change thee wight of the node 
+                    if (MSTResultList[destination].weight > newWight) {
+                        decreaseKey(newWight, destination);//change thee wight of the node 
                         //update the wight and the parent
                         MSTResultList[destination].parent.label = extractedVertex;
-                        MSTResultList[destination].weight = newKey;
+                        MSTResultList[destination].weight = newWight;
                        
                         
                     }
@@ -112,15 +112,15 @@ public class MHPrimAlg extends MSTAlgorithm {
     
     /**
      * remove the min value form the min heap 
-     * @param newKey
-     * @param vertex 
+     * @param newWight new wight to update 
+     * @param vertex need to modify
      */
-    public void decreaseKey(int newKey, int vertex) {
+    public void decreaseKey(int newWight, int vertex) {
         //get the index which key's needs a decrease;
         int index = indexes[vertex];
         //get the node and update its value
         Edge node = MinHeapArr[index];
-        node.weight = newKey;
+        node.weight = newWight;
         bubbleUp(index);
         
     }
@@ -139,7 +139,7 @@ public class MHPrimAlg extends MSTAlgorithm {
     /**
      * put the new value added to the correct position
      * 
-     * @param Number 
+     * @param Number to bubbleUp index
      */
     public void bubbleUp(int Number) {
       
@@ -176,7 +176,7 @@ public class MHPrimAlg extends MSTAlgorithm {
     }
     /**
      * this method rearrange the heap again  after deleting the top 
-     * @param k 
+     * @param k to sinkDown
      */
     public void sinkDown(int k) {
         int smallest = k;

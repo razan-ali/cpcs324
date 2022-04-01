@@ -31,7 +31,7 @@ public class Vertex {
     }
     /**
      * 
-     * @param label 
+     * @param label of a vertex
      */
     public Vertex(int label) {
         this.label = label;

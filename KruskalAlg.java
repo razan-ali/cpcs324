@@ -61,7 +61,7 @@ public class KruskalAlg extends MSTAlgorithm{
     
     /**
      * this method used to create one-element set{x} for all the V in the graph 
-     * @param edges 
+     * @param edges all edges of graph 
      */
     public void makeSet(Edge [] edges ) {
         //for all the graph vertices
@@ -95,9 +95,9 @@ public class KruskalAlg extends MSTAlgorithm{
     
     /**
      * union the disjoint subset of source_vertex and target_vertex 
-     * @param edges
-     * @param source_vertex 
-     * @param target_vertex 
+     * @param edges all edges 
+     * @param source_vertex source vertex to be union
+     * @param target_vertex target vertex to be union
      */
     public void union(Edge [] edges, int source_vertex, int target_vertex) {
         //first find the subset of source_vertex and subset of target_vertex 

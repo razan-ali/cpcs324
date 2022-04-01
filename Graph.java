@@ -35,9 +35,9 @@ public class Graph {
      * constructor with three parameter (number of vertices , number of edges , boolean to indicate  
      * if graph is directed or not
      * 
-     * @param verticesNo
-     * @param edgeNo
-     * @param isDigraph 
+     * @param verticesNo number of vertices of graph 
+     * @param edgeNo    number of edges of graph 
+     * @param isDigraph if its a directed graph or not 
      */
     public Graph(int verticesNo, int edgeNo, boolean isDigraph  ) {
         this.verticesNo = verticesNo;
@@ -116,8 +116,8 @@ public class Graph {
     //--------------
     /**
      * 
-     * @param SourceId
-     * @param targetID
+     * @param SourceId source vertex label to check
+     * @param targetID target vertex label to check
      * @return true if the source has an edge with the target, otherwise false 
      */
     public boolean isDuplicated(int SourceId, int targetID) {

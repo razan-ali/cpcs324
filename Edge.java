@@ -35,9 +35,9 @@ public class Edge implements Comparable<Edge>  {
     /**
      * constructor with parameters
      * 
-     * @param source
-     * @param target
-     * @param weight 
+     * @param source source vertex of edge 
+     * @param target target vertex of edge 
+     * @param weight edge weight 
      */
     public Edge(Vertex source, Vertex target, int weight) {
         this.source = source;

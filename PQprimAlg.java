@@ -28,7 +28,7 @@ public class PQprimAlg extends MSTAlgorithm{
     }
     /**
      * this method take the graph as its parameter to find MST of a graph
-     * @param graph 
+     * @param graph of a graph input
      */
     public void PrimPQ(Graph graph){
         
