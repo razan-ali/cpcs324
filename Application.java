@@ -55,8 +55,8 @@ public class Application {
         
         switch(caseNumber){
             case 1:
-                verticesNo = 6;
-                edgesNo = 7;
+                verticesNo = 1000;
+                edgesNo = 10000;
                 break;
             case 2:
                 verticesNo = 1000;
