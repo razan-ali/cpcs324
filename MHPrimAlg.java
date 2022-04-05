@@ -83,6 +83,7 @@ public class MHPrimAlg extends MSTAlgorithm {
         while (!isEmpty()) {
             //extract the min top element 
             Edge extractedMinNode = extractMin();
+            cost+= extractedMinNode.weight;
             //extracted vertex lable 
             int extractedVertex = extractedMinNode.source.label;
             MSTResultList[extractedVertex].source.isVisited = true; //mark the extracted vertex ad visited 
@@ -244,9 +245,7 @@ public class MHPrimAlg extends MSTAlgorithm {
      * @return cost of MST
      */
     public int getCost() {
-        for(int i=0; i<MSTResultList.length;i++){
-            cost+=MSTResultList[i].weight;
-        }
+       
         return cost;
 
     }
